@@ -1,0 +1,13 @@
+{
+  "profileData": [
+  {
+    "profName": "Left Shark",
+    "profImg": "/images/leftshark.jpeg",
+    "profField": "Computer Science",
+    "profMOOC": "Intro to Human Computer Interaction",
+    "profTeach": "Javascript",
+    "profLearn": "Python",
+    "profAboutMe": "I am the left shark. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus lobortis massa. Donec pharetra, odio ac pretium rhoncus, arcu mi feugiat felis, quis convallis ante ante at lacus. Aliquam elementum purus sit amet rhoncus sodales. Vestibulum finibus finibus dolor ac maximus. Phasellus placerat, elit nec gravida molestie, nunc tellus vulputate enim, vitae venenatis est velit sed est. Suspendisse imperdiet, sem in lacinia rutrum, arcu dolor mollis dolor, vitae hendrerit odio urna ut urna. Phasellus urna dolor, maximus et ligula ac, blandit egestas ante."
+  }
+  ]
+}

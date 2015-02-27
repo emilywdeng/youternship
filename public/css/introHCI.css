@@ -1,0 +1,413 @@
+/* applies to anything of class "example-class-selector" */
+@font-face {
+  font-family: Open Sans,sans-serif;
+  font-weight: 300;
+}
+
+.example-class-selector {
+ margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+ /* Colors are in hexadecimal: http://www.colorpicker.com/ */
+ color: #ffffff;
+}
+
+/* this style exists to make it obvious that you've successfully linked
+the CSS to the page. feel free to remove it once the link is working. */
+
+.jumbotron p.active {
+ color: #1b1b1b;
+}
+
+body {
+ font-family: "Open Sans", sans-serif;
+ font-weight: 300;
+ border: 0px;
+ padding: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ background-color: #eaeaea;
+}
+
+
+p{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #000;
+  display: inline-block;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  color: #33363c;
+}
+
+h1 {
+  font-weight: bold;
+  font-size:5.9vw;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 3%;
+}
+
+h2{
+  font-weight: 300;
+  text-align: left;
+}
+
+h3 {
+  font-weight: bold;
+  font-size:5.3vw;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 2vw;
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h5 {
+  font-size: 4vw;
+  font-weight: 300;
+}
+
+.btn.btn-default{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail > img, .thumbnail a > img{
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 0;
+  margin-left: 0;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.thumbnail {
+
+ position: relative;
+ display: flex;
+}
+
+.Confirmed {
+  min-width: 80px;
+  height: 30px;
+  border:1px solid #4DB870;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  color: #4DB870;
+  font-weight: 300;
+  padding-bottom: 2px;
+  margin: 10px;
+  font-size: 11px;
+}
+
+.Pending {
+  min-width: 80px;
+  height: 30px;
+  border:1px solid #C0C0C0;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  color: #C0C0C0;
+  font-weight: 300;
+  padding-bottom: 2px;
+  margin:10px;
+  font-size: 11px;
+}
+
+.Rejected {
+  min-width: 80px;
+  height: 30px;
+  border:1px solid #D63333;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  color: #D63333;
+  font-weight: 300;
+  padding-bottom: 2px;
+  margin: 10px;
+  font-size: 11px;
+}
+
+.homeImg{
+  height: 100px;
+  width: 100px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.homeImg img {
+  width: auto;
+  height: 100px;
+
+}
+
+.searchImg {
+  float: left;
+  max-height:100px;
+  width:100vw;
+  height:100vw;
+  max-width: 100px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.searchImg img {
+  width: auto;
+  height: 100px;
+}
+
+p.ng-binding {
+  margin:10px;
+  margin-top: 15px;
+}
+.faces {
+ width: 100px;
+ height: 100%;
+ position: relative;
+ display: flex;
+
+}
+
+.title{
+  padding-bottom: 2%;
+}
+
+a:link {
+ color: #000000;
+ text-decoration: none;
+}
+
+a:visited {
+ color: #000000;
+}
+
+a:hover {
+ color: #000000;
+
+}
+
+a.thumbnail{
+  position: relative;
+  display: flex;
+
+}
+
+
+.jumbotron {
+ position: relative;
+ background: none;
+ outline-color: #000000;
+}
+
+.jumbotron:after {
+ content:"";
+ background: #ffffff;
+ opacity: 1;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ position: absolute;
+ z-index: -1;
+}
+
+.jumbotron p {
+ color: #000000;
+
+}
+
+.jumbotron h1 {
+ font-size: 5.9vw;
+ text-align: center;
+}
+
+
+.project a {
+}
+
+.list {
+  color: #ffffff;
+}
+
+li.test{
+  list-style-type: circle;
+}
+
+ul.testing{
+  margin-left: 20px;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+p.test{
+  position: relative;
+  padding-left: 5vw;
+
+}
+
+.profImg {
+  clear: both;
+  height:100px;
+  width:100px;
+  overflow: hidden;
+  border-radius: 100%;
+  position: relative;
+  margin-top: 2%;
+}
+
+.profImg img {
+  width: auto;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.profHeader {
+  padding-left:  30%;
+}
+
+.profile {
+ position: relative;
+ background: none;
+ outline-color: #000000;
+ padding-left: 5%;
+ padding-right: 5%;
+ padding-bottom: 5%;
+ padding-top: 1%;
+ font-size: 24px;
+ border-radius: 10px;
+ background: #ffffff;
+
+}
+
+.profBody {
+ font-size: 24px;
+ font-size: 4vw;
+}
+
+.profile:after {
+ content:"";
+ opacity: 1;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ position: absolute;
+ z-index: -1;
+}
+
+#profiletext {
+ background-color: #000000;
+ padding-top: 5%;
+ padding-left: 2%;
+ padding-right: 2%;
+}
+
+#profiletext h4, h3 {
+  float: right;
+}
+
+#profilebutton {
+ float:left;
+}
+
+.header {
+ background: #949494;
+ border: 1px solid transparent;
+ border-radius:1px;
+ border-color: #797979;
+ position: fixed;
+ width: 100%;
+ z-index: 1000;
+ margin-bottom: 10px;
+}
+
+.header h4 {
+  color: #797979;
+  font-weight: 300;
+}
+
+ul.navi{
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  padding-left: 0px;
+  position: relative;
+  padding-left: 0px;
+}
+
+ul.navi li{
+  float: left;
+}
+
+li {
+  position: relative;
+  padding: 0px;
+
+}
+
+#profbtn{
+  float: right;
+}
+
+.btn-hci {
+  float: left;
+  color: #ffffff;
+  background-color: #949494;
+  display: inline-block;
+  padding: 8px 15px;
+  margin-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 0px solid transparent;
+  border-radius: 1px;
+  border-color: #797979;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.container {
+  padding-right: 2px;
+  padding-left: 2px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.pictures {
+  float: left;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}

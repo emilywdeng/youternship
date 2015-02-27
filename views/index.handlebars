@@ -1,0 +1,128 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Unternship Home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	<link href="/css/introHCI.css" rel="stylesheet">
+
+	<!-- CSS for Mobile Interaction -->
+	<!-- This is the Google Font -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+	<!-- this is a comment in HTML -->
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]-->
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+  <!--[endif]-->
+</head>
+
+<body>
+ <div class="header">
+  <ul class="navi"><h4>
+    <li><button id="homebtn" class="btn-hci" onclick="location.href='/'">Home</button>|</li>
+    <li><button id="searchbtn" class="btn-hci" onclick="location.href='/search'">Mentor Search</button>|</li>
+    <li><button id="profilebtn" class="btn-hci" onclick="location.href='/profile'">Profile</button></li>
+  </h4></ul>
+</div>
+<div class="container">
+
+
+  <div>
+   <h1>Unternship</h1>
+ </div>
+
+ {{#each goal}}
+ <div class = "listing" class="ui-content">
+
+   <div class = "listing" class="ui-content">
+    <a href="#" class="thumbnail">
+     <img class="pictures" src="{{image}}">
+     <ul class="testing">
+      <li class="test"><b>Goal: </b>{{goal}}</li>
+      <li class="test"><b>Due: </b>{{deadline}}</li>
+    </ul>
+    <br>
+    <div class = "{{goalStatus}}">
+      {{goalStatus}}
+    </div>
+  </a>
+</div>
+{{/each}}
+
+<input type="submit" id="addgoalbtn" class="btn btn-default" class="ui-content" value="Request Goal"></input>
+</div>
+
+<!-- Modal HTML to trigger on click of mentor box -->
+<div class="modalex">
+ <div id="goal-modal" class="modal fade">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     <h4 class="modal-title">Goal</h4>
+   </div>
+   <div class="modal-body">
+
+     <p><b>This is a goal description.</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus lobortis massa. Donec pharetra, odio ac pretium rhoncus, arcu mi feugiat felis, quis convallis ante ante at lacus. Aliquam elementum purus sit amet rhoncus sodales. Vestibulum finibus finibus dolor ac maximus. Phasellus placerat, elit nec gravida molestie, nunc tellus vulputate enim, vitae venenatis est velit sed est. Suspendisse imperdiet, sem in lacinia rutrum, arcu dolor mollis dolor, vitae hendrerit odio urna ut urna. Phasellus urna dolor, maximus et ligula ac, blandit egestas ante.
+     </p>
+     <p class="text-warning"><small>Deadline: {How can we put the deadline handlebars here}</small></p>
+     <br> <button id="delete" class="project-delete btn btn-default" '+
+     'type="button">Delete Goal</button>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+<!-- Modal HTML to add goal -->
+<div class="modalex">
+ <div id="addgoal-modal" class="modal fade">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     <h4 class="modal-title">Goal</h4>
+   </div>
+   <div class="modal-body">
+
+     <!-- Form to add a goal -->
+     <form id="add-goal-form" role = "form" method = "get" action = "/index2">
+      <div class = "form-group">
+       <label for = "goal">Goal:</label>
+       <input type="text" class="form-control" id = "goal" name ="goal" placeholder="What's your goal?">
+       <br>
+       <label for = "deadline">Deadline:</label>
+       <input type="date" class="form-control" id = "deadline" name="deadline" placeholder="January 1, 2015">
+       <br>
+       <label for = "image">Image:</label> <br>
+       Choose an image
+       <input type="file" onchange="previewFile()">
+       <br>Or insert image URL
+       <br><input type="text" class="form-control" id = "image" name="image" placeholder="Insert image URL"> 
+
+     </div>
+     <input type="submit" class="btn btn-default" value="Submit"></input>
+   </form>
+ </div>
+ <div class="modal-footer">
+   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+ </div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="js/introHCI.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "goal": [
+    {
+      "goal": "Learn how to use JavaScript. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam ipsum non leo scelerisque, in semper erat mattis. Sed id.",
+      "deadline": "2015-02-20",
+      "image": "/images/js_icon.PNG",
+      "goalStatus": "Confirmed"
+    },
+    {
+      "goal": "Become a llama",
+      "deadline": "2015-03-01",
+      "image": "http://images.nationalgeographic.com/wpf/media-live/photos/000/006/cache/llama_613_600x450.jpg",
+      "goalStatus": "Rejected"
+    },
+    {
+        "goal": "Learn about Linux",
+        "deadline": "2015-04-05",
+        "image": "/images/linux_icon.PNG",
+        "goalStatus": "Pending"
+    }
+  ]
+}

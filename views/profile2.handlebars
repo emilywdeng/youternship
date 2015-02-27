@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Unternship</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/introHCI.css" rel="stylesheet">
+  <!-- This is the Google Font -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,300,400|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
+  <!-- this is a comment in HTML -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    </head>
+
+    <body>
+      <div class="header">
+        <ul class="navi"><h4>
+          <li><button id="homebtn" class="btn-hci" onclick="location.href='/'">Home</button>|</li>
+          <li><button id="searchbtn" class="btn-hci" onclick="location.href='/search'">Mentor Search</button>|</li>
+          <li><button id="profilebtn" class="btn-hci" onclick="location.href='/profile'">Profile</button></li>
+        </h4></ul>
+      </div>
+      <div class="container">
+        <div class="profile">
+          <!-- PAGE TITLE -->
+          <div>
+            <h1>My Profile</h1>
+          </div>
+
+
+          {{#each profileData}}
+          <div class = "profHeader">
+            <div class = "profImg" style="background-image: url('{{profImg}}');"><img src="{{profImg}}"></div>
+            <h4><b>{{profName}}</b>
+            </div>
+            <div class = "profBody">
+              <br>
+              <br><b>Field:</b> {{profField}}
+              <br><b>MOOCs:</b> {{profMOOC}}
+            </h4>
+            <hr>
+            Mentoring in:
+            <ul>
+              <li>{{profTeach}}</li>
+            </ul>
+            <br>
+            Wanting to Learn:
+            <ul>
+              <li>{{profLearn}}</li>
+            </ul>
+
+            <br>
+            <b>About Me:</b>
+            {{profAboutMe}}
+          </div>  
+
+        </div>
+
+
+        <input type="submit" id="editprofilebtn" class="btn btn-default" class="ui-content" value="Edit Profile"></input>
+      </div>
+
+      <!-- Modal HTML to edit profile edit  -->
+      <div class="modalex">
+        <div id="editprofile" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title">Edit Profile </h2>
+              </div>
+              <div class="modal-body">
+                <form id="edit-profile-form" role = "form" method = "post" action = "/profile2">
+                  <div class = "form-group">
+                    <label for = "name">Name: </label>
+                    <input type="text" class="form-control" id = "profName" name ="profName" value="{{profName}}">
+                    <br>
+                    <label for = "name">Profile Picture: </label>
+                    <br>Choose an image <br> <input type="file" onchange="previewFile()">
+                    <br>Or insert image URL
+                    <input type="text" class="form-control" id = "profImg" name ="profImg" value="{{profImg}}">
+                    <br>
+                    <label for = "field">Field: </label>
+                    <input type="text" class="form-control" id = "profField" name ="profField" value="{{profField}}">
+                    <br>
+                    <label for = "MOOC">MOOCs: </label>
+                    <input type="text" class="form-control" id = "profMOOC" name ="profMOOC" value="{{profMOOC}}">
+                    <br>
+                    <label for = "Teach">Mentoring in: </label>
+                    <input type="text" class="form-control" id = "profTeach" name ="profTeach" value="{{profTeach}}">
+                    <br>
+                    <label for = "Learn">Wanting to Learn: </label>
+                    <input type="text" class="form-control" id = "profLearn" name ="profLearn" value="{{profLearn}}">
+                    <br>
+                    <label for = "AboutMe">About Me: </label>
+                    <textarea type="text" class="form-control" id = "profAboutMe" name="profAboutMe" rows="5">{{profAboutMe}}</textarea>
+                    <br>
+                  </div>
+                  <input type="submit" class="btn btn-default" value="Submit"></input>
+                </form>
+                {{/each}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script src="js/introHCI.js"></script>
+
+    </body>
+    </html>
